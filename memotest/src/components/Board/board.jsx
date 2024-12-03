@@ -1,4 +1,4 @@
-import BoardIcons from "./boardIcons";
+import BoardIcons from "./BoardIcons";
 import "./board.css";
 import { useState } from "react";
 
