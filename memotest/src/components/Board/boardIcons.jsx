@@ -14,6 +14,7 @@ const BoardIcons = [
     pigIcon, 
     deerIcon, 
     spiderIcon
-].flatMap((image) => [image, image]).sort(() => Math.random() - 0.5);
+];
+
 
 export default BoardIcons;
