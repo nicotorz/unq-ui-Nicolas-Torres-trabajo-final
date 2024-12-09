@@ -27,10 +27,10 @@ const Menu = () => {
                         Play Solo
                     </button>
                     <button
-                        className={`menu-btn ${mode === "duo" ? "selected" : ""}`}
-                        onClick={() => setMode("duo")}
+                        className={`menu-btn ${mode === "2vs2" ? "selected" : ""}`}
+                        onClick={() => setMode("2vs2")}
                     >
-                        2 vs 2
+                        1 vs 1
                     </button>
                 </div>
 

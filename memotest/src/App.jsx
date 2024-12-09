@@ -1,8 +1,8 @@
-import Board from './components/Board/board';
 import './App.css';
 import { ConfigProvider } from './hooks/ConfigContext';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Asegúrate de que sea `react-router-dom`
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Menu from './components/menu/Menu';
+import Board from './components/Board/board';
 
 function App() {
   return (

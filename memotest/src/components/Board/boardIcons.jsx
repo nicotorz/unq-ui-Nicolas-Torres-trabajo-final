@@ -14,7 +14,7 @@ const BoardIcons = [
     pigIcon, 
     deerIcon, 
     spiderIcon
-];
+]
 
 
 export default BoardIcons;
