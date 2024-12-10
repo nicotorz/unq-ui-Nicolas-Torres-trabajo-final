@@ -18,7 +18,7 @@
 
 .board-grid-8x8 {
     display: grid;
-    gap:5px;
+    gap:2px;
     grid-template-columns: repeat(8, 1fr);
 }
 
