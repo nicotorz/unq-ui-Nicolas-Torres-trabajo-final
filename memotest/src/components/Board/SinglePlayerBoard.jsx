@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import ScoreBar from "../bars/ScoreBar";
 import Card from "./Card";
-import BoardIcons from "./boardIcons";
+import BoardIcons from "./BoardIcons";
 import GameFinished from "../modal/GameFinished";
 import "./board.css"
 
@@ -71,7 +71,13 @@ const SinglePlayerBoard = ({config}) => {
         <>
             <ScoreBar score={score} moves={moves} currentPlayer={1} />
             <ul className="board-content">
-                <div className="board-grid">
+                <div className={`${
+                                config.boardSize === 8
+                                    ? "board-grid-4x4"
+                                    : config.boardSize === 18
+                                    ? "board-grid-6x6"
+                                    : "board-grid-8x8"
+                                }`}>
                     {boardIcons.map((image, index) => {
                         const uniqueKey = `${image}-${index}`;
                         return (
@@ -87,6 +93,7 @@ const SinglePlayerBoard = ({config}) => {
                         );
                     })}
                 </div>
+                
             </ul>
 
             {gameFinished && (

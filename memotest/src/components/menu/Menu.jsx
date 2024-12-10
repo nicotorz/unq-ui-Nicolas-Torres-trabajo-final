@@ -4,7 +4,7 @@ import { ConfigContext  } from '../../hooks/ConfigContext';
 import "./menu.css";
 
 const Menu = () => {
-    const [boardSize, setBoardSize] = useState(4);
+    const [boardSize, setBoardSize] = useState(8);
     const [mode, setMode] = useState("solo");
     const navigate = useNavigate();
     const { setConfig } = useContext(ConfigContext)
@@ -41,10 +41,9 @@ const Menu = () => {
                         value={boardSize}
                         onChange={(e) => setBoardSize(Number(e.target.value))}
                     >
-                        <option value={4}>4x4</option>
-                        <option value={5}>5x5</option>
-                        <option value={6}>6x6</option>
-                        <option value={8}>8x8</option>
+                        <option value={8}>4x4</option>
+                        <option value={18}>6x6</option>
+                        <option value={32}>8x8</option>
                     </select>
                 </div>
 

@@ -87,7 +87,13 @@ const TwoPlayersBoard = ({ config }) => {
         <>
             <ScoreBar score={currentPlayer === 1 ? player1Score : player2Score} moves={moves} currentPlayer={currentPlayer} />
             <ul className="board-content">
-                <div className="board-grid">
+                <div className={`${
+                                config.boardSize === 8
+                                    ? "board-grid-4x4"
+                                    : config.boardSize === 18
+                                    ? "board-grid-6x6"
+                                    : "board-grid-8x8"
+                                }`}>
                     {boardIcons.map((image, index) => {
                         const uniqueKey = `${image}-${index}`;
                         return (
