@@ -27,8 +27,8 @@ const Menu = () => {
                         Play Solo
                     </button>
                     <button
-                        className={`menu-btn ${mode === "2vs2" ? "selected" : ""}`}
-                        onClick={() => setMode("2vs2")}
+                        className={`menu-btn ${mode === "1vs1" ? "selected" : ""}`}
+                        onClick={() => setMode("1vs1")}
                     >
                         1 vs 1
                     </button>

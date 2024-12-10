@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ScoreBar from "../bars/ScoreBar";
 import Card from "./Card";
-import BoardIcons from "./boardIcons";
+import BoardIcons from "./BoardIcons";
 import GameFinished from "../modal/GameFinished";
 import "./board.css"
 

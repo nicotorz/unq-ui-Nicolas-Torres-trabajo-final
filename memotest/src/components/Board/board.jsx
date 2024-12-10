@@ -10,7 +10,7 @@ const Board = () => {
         <div className="game-board">
             {config.mode === "solo" ? (
                 <SinglePlayerBoard config={config}/>
-            ) : config.mode === "2vs2" ? (
+            ) : config.mode === "1vs1" ? (
                 <TwoPlayersBoard config={config}/>
             ) : (
                 <p>Please select a mode to start the game.</p>
