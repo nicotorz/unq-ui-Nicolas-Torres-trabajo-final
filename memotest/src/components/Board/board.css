@@ -1,21 +1,19 @@
 .board-content {
     display: flex;
     justify-content: center;
-    margin-top: 65px;
+    margin: 65px;
 }
 
 .board-grid-4x4 {
     display: grid;
     gap:5px;
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 160px;
 }
 
 .board-grid-6x6 {
     display: grid; 
     gap:5px;
     grid-template-columns: repeat(6, 1fr);
-    margin-top: 80px;
 }
 
 .board-grid-8x8 {
