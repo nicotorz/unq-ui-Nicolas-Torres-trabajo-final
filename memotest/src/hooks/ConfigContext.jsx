@@ -4,8 +4,8 @@ export const ConfigContext = createContext();
 
 export const ConfigProvider = ({ children }) => {
     const [config, setConfig] = useState({
-        boardSize: 8, 
-        mode: "solo", 
+        boardSize: null, 
+        mode: "", 
     });
 
     return (

@@ -1,0 +1,39 @@
+.noBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #545E75; 
+    color: #f5f5f5; 
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+.noBoard p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #63ADF2; 
+}
+
+.noBoard button {
+    background-color: #304D6D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.noBoard button:hover {
+    transform: scale(1.2); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.noBoard button:active {
+    transform: scale(1.1); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}

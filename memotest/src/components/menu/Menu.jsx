@@ -1,15 +1,25 @@
-import { useState, useContext  } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
-import { ConfigContext  } from '../../hooks/ConfigContext';
+import { ConfigContext } from "../../hooks/ConfigContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./menu.css";
 
 const Menu = () => {
-    const [boardSize, setBoardSize] = useState(8);
-    const [mode, setMode] = useState("solo");
+    const [boardSize, setBoardSize] = useState(null); 
+    const [mode, setMode] = useState(null); 
     const navigate = useNavigate();
-    const { setConfig } = useContext(ConfigContext)
+    const { setConfig } = useContext(ConfigContext);
 
     const handleStart = () => {
+        if (!mode) {
+            toast.error("Please select a game mode!");
+            return;
+        } else if (!boardSize) {
+            toast.error("Please select a board size!");
+            return;
+        }
+
         setConfig({ boardSize, mode });
         navigate(`/Game`);
     };
@@ -38,9 +48,12 @@ const Menu = () => {
                     <label htmlFor="boardSize">Select Board Size:</label>
                     <select
                         id="boardSize"
-                        value={boardSize}
+                        value={boardSize || ""} 
                         onChange={(e) => setBoardSize(Number(e.target.value))}
                     >
+                        <option value="" disabled>
+                            -- Select Board Size --
+                        </option>
                         <option value={8}>4x4</option>
                         <option value={18}>6x6</option>
                         <option value={32}>8x8</option>
@@ -51,6 +64,8 @@ const Menu = () => {
                     Start Game
                 </button>
             </div>
+
+            <ToastContainer />
         </div>
     );
 };
